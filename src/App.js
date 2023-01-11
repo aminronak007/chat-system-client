@@ -10,8 +10,6 @@ function App() {
       <Routes>
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/" element={<LandingPage />} />
-
-        {/* <Redirect to="/login" element={<Login />} /> */}
       </Routes>
       <Navigate to="/login" replace={true} />
     </Fragment>

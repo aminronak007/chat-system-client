@@ -1,13 +1,12 @@
 import { combineReducers } from "redux";
 import { routerReducer } from "react-router-redux";
-// import auth from "./auth/reducers";
-// import loader from "./loader/reducers";
+import Auth from "./auth/reducer";
+import navigation from "./navigation/reducer";
 
 const createReducer = (asyncReducers) =>
   combineReducers({
-    // auth,
-    // loader,
-    // navigation,
+    Auth,
+    navigation,
     router: routerReducer,
     ...asyncReducers,
   });

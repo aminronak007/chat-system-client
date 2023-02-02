@@ -8,13 +8,13 @@ export const api = (token) => {
   if (typeof token === "string" && token.split(".").length === 3)
     return axios.create({
       withCredentials: true,
-      baseURL: `${BACKEND_URI}/api/`,
+      baseURL: `${BACKEND_URI}/`,
       headers: { authorization: token },
     });
   else
     return axios.create({
       withCredentials: true,
-      baseURL: `${BACKEND_URI}/api/`,
+      baseURL: `${BACKEND_URI}/`,
     });
 };
 

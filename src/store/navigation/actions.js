@@ -54,9 +54,7 @@ const navigationAction = {
 
   check: (data) => ({
     type: navigationAction.CHECK,
-    isFetching: data?.isFetching,
-    isLogin: data?.isLogin,
-    token: data?.token,
+    user: data,
   }),
 };
 

@@ -33,9 +33,7 @@ export default function rootReducer(state = initState, action) {
     case navigationAction.CHECK:
       return {
         ...state,
-        isFetching: action.isFetching,
-        token: action.token,
-        isLogin: action.isLogin,
+        user: action.user,
       };
 
     default:

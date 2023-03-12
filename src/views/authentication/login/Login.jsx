@@ -28,6 +28,7 @@ const Login = (props) => {
     success,
     error,
     token,
+    loginData,
   } = props;
 
   const Error = (props) => {
@@ -48,7 +49,6 @@ const Login = (props) => {
         if (res.success) {
           fetching(false);
           loginData(res.data);
-          console.log(res);
           success(res.message);
           history.push("/index");
         } else {
@@ -60,9 +60,9 @@ const Login = (props) => {
   };
 
   useEffect(() => {
-    if (token) {
-      history.push("/index");
-    }
+    // if (token) {
+    //   history.push("/index");
+    // }
     // eslint-disable-next-line
   }, [token]);
 
